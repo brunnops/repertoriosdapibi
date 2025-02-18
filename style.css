@@ -76,6 +76,8 @@ abbr:hover {
     gap: 15px;
     justify-content: center;  /* Centraliza os ícones horizontalmente */
     align-items: center;      /* Centraliza os ícones verticalmente */
+    margin-top: 0px;
+
 }
 
 .icon {
