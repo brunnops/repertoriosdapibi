@@ -73,10 +73,10 @@ abbr:hover {
 
 .icon-container {
     display: flex;
-    gap: 15px;
+    gap: 10px;
     justify-content: center;  /* Centraliza os ícones horizontalmente */
     align-items: center;      /* Centraliza os ícones verticalmente */
-    margin-top: 0px;
+    margin-top: -5px;
 
 }
 
