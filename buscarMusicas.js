@@ -16,7 +16,7 @@ function search() {
     let allResults = [];
 
     if (query === "") {
-        $("#results").html('<p style="color: red;">Por favor, insira uma palavra-chave válida para a busca.</p>');
+        $("#results").html('<p class="se" style="color: red;">Por favor, insira uma palavra-chave válida para a busca.</p>');
         return;
     }
 
@@ -45,7 +45,7 @@ function search() {
         allResults = allResults.concat(results);
 
         if (allResults.length === 0) {
-            $("#results").html('<p style="color: red;">Nenhum resultado encontrado. Tente outra busca.</p>');
+            $("#results").html('<p class="se" style="color: red;">Nenhum resultado encontrado. Tente outra busca.</p>');
         } else {
             let html = '<table><thead><tr><th>Quem ministra</th><th>Música</th><th>Cantor/Banda/Versão</th><th>Tom Original</th><th>Tom Adaptado</th><th>Observações</th></tr></thead><tbody>';
             allResults.forEach(row => {
@@ -56,7 +56,7 @@ function search() {
         }
     }).catch(function(error) {
         console.error("Erro ao buscar dados: ", error);
-        $("#results").html('<p style="color: red;">Erro ao buscar dados. Tente novamente mais tarde.</p>');
+        $("#results").html('<p class="se" style="color: red;">Erro ao buscar dados. Tente novamente mais tarde.</p>');
     });
 }
 
