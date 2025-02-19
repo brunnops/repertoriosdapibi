@@ -31,7 +31,7 @@ function search() {
         }
 
         const escapedQuery = escapeRegExp(query);
-        const regex = new RegExp(`\\b${escapedQuery}\\b`, "i"); // Regex para buscar palavras inteiras
+        const regex = new RegExp(`(^|\\s)${escapedQuery}(?=\\s|$)`, "i"); // Agora considera palavras inteiras
 
         const results = rows.filter(row => 
             regex.test(removeAcentos(row[0] || "").toLowerCase()) || 
