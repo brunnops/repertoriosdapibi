@@ -278,3 +278,11 @@ footer {
     cursor: pointer;
     color: black;
 }
+
+ul {
+    padding-left: 20px; /* Ajuste a quantidade de pixels conforme necessário */
+}
+
+ul li {
+    list-style-position: inside;  /* Para garantir que o marcador esteja dentro do item */
+}
