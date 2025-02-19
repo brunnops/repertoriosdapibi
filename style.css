@@ -242,7 +242,7 @@ footer {
 .clickable-text {
     font-weight: bold;
     text-decoration: underline;
-    color: blue;
+    color: black;
     cursor: pointer;
 }
 
