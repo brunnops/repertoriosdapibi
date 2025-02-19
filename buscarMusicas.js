@@ -42,16 +42,16 @@ function search() {
         }
 
         const escapedQuery = escapeRegExp(query);
-        const regex = new RegExp(`(^|\\s)${escapedQuery}(?=\\s|$)`, "i"); // Agora considera palavras inteiras
+        const regex = new RegExp(`(^|\\s)${escapedQuery}(?=\\s|$)`, "i");
 
         const results = rows.filter(row => 
-            row.some(col => regex.test(removeAcentos(col || "").toLowerCase())) // Verifica todas as colunas
+            row.some(col => regex.test(removeAcentos(col || "").toLowerCase()))
         );
 
         if (results.length === 0) {
             $("#results").html('<p style="color: red;">Nenhum resultado encontrado. Tente outra busca.</p>');
         } else {
-            displayResults(results); // Exibe os resultados
+            displayResults(results);
         }
     }).catch(function(error) {
         console.error("Erro ao buscar dados: ", error);
@@ -60,8 +60,8 @@ function search() {
 }
 
 $(document).ready(function() {
-    // Evita que o pop-up abra automaticamente
-    $("#ministersModal").hide();  // Esconde o modal inicialmente
+    // Esconde o modal inicialmente
+    $("#ministersModal").hide();  
 
     $("#searchInput").on("keypress", function(event) {
         if (event.which === 13) {
