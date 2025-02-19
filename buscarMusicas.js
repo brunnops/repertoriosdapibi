@@ -75,14 +75,17 @@ window.onload = function() {
 };
 
 $(document).ready(function() {
+    // Exibe o modal ao clicar no texto "Clique aqui"
     $("#openMinistersModal").click(function() {
         $("#ministersModal").fadeIn();
     });
 
+    // Fecha o modal ao clicar no "X"
     $(".close").click(function() {
         $("#ministersModal").fadeOut();
     });
 
+    // Fecha o modal ao clicar fora dele
     $(window).click(function(event) {
         if (event.target.id === "ministersModal") {
             $("#ministersModal").fadeOut();
