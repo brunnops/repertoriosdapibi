@@ -67,14 +67,10 @@ $(document).ready(function() {
             search();
         }
     });
-});
 
-// Limpa o campo de pesquisa quando a página é carregada
-window.onload = function() {
-    document.getElementById("searchInput").value = "";
-};
+    // Garante que o modal está oculto ao carregar a página
+    $("#ministersModal").hide();
 
-$(document).ready(function() {
     // Exibe o modal ao clicar no texto "Clique aqui"
     $("#openMinistersModal").click(function() {
         $("#ministersModal").fadeIn();
@@ -92,3 +88,8 @@ $(document).ready(function() {
         }
     });
 });
+
+// Limpa o campo de pesquisa quando a página é carregada
+window.onload = function() {
+    document.getElementById("searchInput").value = "";
+};
