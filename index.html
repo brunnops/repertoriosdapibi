@@ -18,10 +18,32 @@
                 <h1>Repertórios da <abbr class="PIBI" title="Primeira Igreja Batista de Itaporanga">PIBI</abbr></h1>
                
                 <p class="boas-vindas">Este site oferece uma busca pelo repertório musical ministrado na nossa igreja. 
-                    Você pode pesquisar pelo nome da música, cantor, banda ou versão. Também é possível filtrar todo o repertório de um ministro específico pesquisando pelo seu nome. 
+                    Você pode pesquisar pelo nome da música, cantor, banda ou versão. Também é possível filtrar todo o repertório de um ministro específico pesquisando pelo seu nome.
+                    <button id="openMinistersModal">Clique aqui</button> para visualizar a nossa lista de ministros.
+
+                    <!-- Modal (Pop-up) -->
+<div id="ministersModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Ministros do Repertório</h3>
+        <ul>
+            <li>Izaack</li>
+            <li>Victor</li>
+            <li>Jéssica</li>
+            <li>Joicy</li>
+            <li>Fernanda</li>
+            <li>Geysa</li>
+            <li>Kalebe</li>
+            <li>Rayane</li>
+            <li>Thaís</li>
+        </ul>
+    </div>
+</div>
+                    
                     <p class="boas-vindas">Use a barra de pesquisa para encontrar exatamente o que precisa, seja uma música específica ou todo o repertório de canções ministradas por alguém. 
                         <em class="boas-vindas">(se você estiver usando um dispositivo com tela pequena, deslize lateralmente para visualizar todo o conteúdo da pesquisa).</em></p>
                    </p>
+            
 
                 <input type="text" id="searchInput" placeholder="Digite aqui para pesquisar...">
                 <button onclick="search()">Buscar</button>
