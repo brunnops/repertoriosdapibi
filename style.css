@@ -62,7 +62,6 @@ abbr:hover {
     cursor: pointer;
 }
 
-
 .links:visited {
     color: inherit; /* Garante que a cor não mude após o clique */
 }
@@ -172,7 +171,6 @@ tr:hover {
     .boas-vindas {
         font-size: 0.8rem; /* Garantindo o mesmo tamanho de texto no modo paisagem */
     }
-
 }
 
 /* Responsividade */
