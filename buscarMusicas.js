@@ -1,7 +1,11 @@
-
 // Função para remover acentos das strings
 function removeAcentos(str) {
     return str.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+}
+
+// Função para escapar caracteres especiais em expressões regulares
+function escapeRegExp(text) {
+    return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
 function search() {
@@ -26,13 +30,16 @@ function search() {
             return;
         }
 
+        const escapedQuery = escapeRegExp(query);
+        const regex = new RegExp(`\\b${escapedQuery}\\b`, "i"); // Regex para buscar palavras inteiras
+
         const results = rows.filter(row => 
-            removeAcentos((row[0] || "").toLowerCase()).includes(query) || 
-            removeAcentos((row[1] || "").toLowerCase()).includes(query) || 
-            removeAcentos((row[2] || "").toLowerCase()).includes(query) ||
-            removeAcentos((row[3] || "").toLowerCase()).includes(query) || 
-            removeAcentos((row[4] || "").toLowerCase()).includes(query) || 
-            removeAcentos((row[5] || "").toLowerCase()).includes(query)
+            regex.test(removeAcentos(row[0] || "").toLowerCase()) || 
+            regex.test(removeAcentos(row[1] || "").toLowerCase()) || 
+            regex.test(removeAcentos(row[2] || "").toLowerCase()) ||
+            regex.test(removeAcentos(row[3] || "").toLowerCase()) || 
+            regex.test(removeAcentos(row[4] || "").toLowerCase()) || 
+            regex.test(removeAcentos(row[5] || "").toLowerCase())
         );
 
         allResults = allResults.concat(results);
@@ -62,8 +69,7 @@ $(document).ready(function() {
     });
 });
 
-
-    // Limpa o campo de pesquisa quando a página é carregada
-    window.onload = function() {
-        document.getElementById("searchInput").value = ""
-    };
+// Limpa o campo de pesquisa quando a página é carregada
+window.onload = function() {
+    document.getElementById("searchInput").value = "";
+};
