@@ -27,12 +27,12 @@ function search() {
         }
 
         const results = rows.filter(row => 
-            new RegExp(`\\b${query}\\b`, "i").test(removeAcentos((row[0] || "").toLowerCase()))
-            new RegExp(`\\b${query}\\b`, "i").test(removeAcentos((row[1] || "").toLowerCase()))
-            new RegExp(`\\b${query}\\b`, "i").test(removeAcentos((row[2] || "").toLowerCase()))
-            new RegExp(`\\b${query}\\b`, "i").test(removeAcentos((row[3] || "").toLowerCase()))
-            new RegExp(`\\b${query}\\b`, "i").test(removeAcentos((row[4] || "").toLowerCase()))
-            new RegExp(`\\b${query}\\b`, "i").test(removeAcentos((row[5] || "").toLowerCase()))
+            removeAcentos((row[0] || "").toLowerCase()).includes(query) || 
+            removeAcentos((row[1] || "").toLowerCase()).includes(query) || 
+            removeAcentos((row[2] || "").toLowerCase()).includes(query) ||
+            removeAcentos((row[3] || "").toLowerCase()).includes(query) || 
+            removeAcentos((row[4] || "").toLowerCase()).includes(query) || 
+            removeAcentos((row[5] || "").toLowerCase()).includes(query)
         );
 
         allResults = allResults.concat(results);
