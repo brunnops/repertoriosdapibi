@@ -1,3 +1,9 @@
+
+// Função para remover acentos das strings
+function removeAcentos(str) {
+    return str.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+}
+
 function search() {
     const query = removeAcentos($("#searchInput").val().toLowerCase().trim());
     const sheetID = '1rEmtLEKMz7wGXYs2y3FKpp_BCcNVI4y_UmtL7AC-noY';
@@ -20,15 +26,13 @@ function search() {
             return;
         }
 
-        const regex = new RegExp(`\\b${query}\\b`, "i"); // Regex para buscar palavras inteiras
-
         const results = rows.filter(row => 
-            regex.test(removeAcentos((row[0] || "").toLowerCase())) || 
-            regex.test(removeAcentos((row[1] || "").toLowerCase())) || 
-            regex.test(removeAcentos((row[2] || "").toLowerCase())) ||
-            regex.test(removeAcentos((row[3] || "").toLowerCase())) || 
-            regex.test(removeAcentos((row[4] || "").toLowerCase())) || 
-            regex.test(removeAcentos((row[5] || "").toLowerCase()))
+            new RegExp(`\\b${query}\\b`, "i").test(removeAcentos((row[0] || "").toLowerCase()))
+            new RegExp(`\\b${query}\\b`, "i").test(removeAcentos((row[1] || "").toLowerCase()))
+            new RegExp(`\\b${query}\\b`, "i").test(removeAcentos((row[2] || "").toLowerCase()))
+            new RegExp(`\\b${query}\\b`, "i").test(removeAcentos((row[3] || "").toLowerCase()))
+            new RegExp(`\\b${query}\\b`, "i").test(removeAcentos((row[4] || "").toLowerCase()))
+            new RegExp(`\\b${query}\\b`, "i").test(removeAcentos((row[5] || "").toLowerCase()))
         );
 
         allResults = allResults.concat(results);
@@ -48,3 +52,18 @@ function search() {
         $("#results").html('<p style="color: red;">Erro ao buscar dados. Tente novamente mais tarde.</p>');
     });
 }
+
+$(document).ready(function() {
+    $("#searchInput").on("keypress", function(event) {
+        if (event.which === 13) {
+            event.preventDefault();
+            search();
+        }
+    });
+});
+
+
+    // Limpa o campo de pesquisa quando a página é carregada
+    window.onload = function() {
+        document.getElementById("searchInput").value = ""
+    };
