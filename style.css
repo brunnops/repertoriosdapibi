@@ -221,9 +221,17 @@ footer {
     margin: auto;
 }
 
+/* Estilizando o texto clicável */
+.clickable-text {
+    font-weight: bold;
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}
+
 /* Estilizando o fundo do modal */
 .modal {
-    display: none; /* Oculto por padrão */
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;
