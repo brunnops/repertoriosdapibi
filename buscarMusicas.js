@@ -73,3 +73,20 @@ $(document).ready(function() {
 window.onload = function() {
     document.getElementById("searchInput").value = "";
 };
+
+$(document).ready(function() {
+    $("#openMinistersModal").click(function() {
+        $("#ministersModal").fadeIn();
+    });
+
+    $(".close").click(function() {
+        $("#ministersModal").fadeOut();
+    });
+
+    $(window).click(function(event) {
+        if (event.target.id === "ministersModal") {
+            $("#ministersModal").fadeOut();
+        }
+    });
+});
+
