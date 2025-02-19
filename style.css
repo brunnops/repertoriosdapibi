@@ -59,7 +59,7 @@ h1 {
 }
 
 abbr:hover {
-    cursor: pointer
+    cursor: pointer;
 }
 
 
@@ -77,7 +77,6 @@ abbr:hover {
     justify-content: center;  /* Centraliza os ícones horizontalmente */
     align-items: center;      /* Centraliza os ícones verticalmente */
     margin-top: -20px;
-
 }
 
 .icon {
@@ -177,9 +176,27 @@ tr:hover {
 }
 
 /* Responsividade */
-@media (max-width: 280px) {
+@media (max-width: 768px) {
     h1 {
         font-size: 1.2rem;
+    }
+
+    .boas-vindas {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+
+    th, td {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1rem;
     }
 
     .boas-vindas {
@@ -255,8 +272,9 @@ footer {
 
 /* Botão de fechar */
 .close {
-    float: right;
+    position: absolute;
+    top: 10px;
+    right: 10px;
     font-size: 20px;
     cursor: pointer;
 }
-
