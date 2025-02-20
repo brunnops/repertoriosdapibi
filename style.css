@@ -260,6 +260,7 @@ footer {
 }
 ul {
     padding-left: 10px; /* Ajuste a quantidade de pixels conforme necessário */
+    margin: 0;
 }
 
 .se {
