@@ -1,42 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Repertórios da PIBI</title>
-    <link rel="stylesheet" href="style.css">
-    <link id="favicon-light" rel="shortcut icon" href="pibilogolight.png" type="image/png" sizes="32x32" media="(prefers-color-scheme: dark)">
-    <link id="favicon-dark" rel="shortcut icon" href="pibilogodark.png" type="image/png" sizes="32x32" media="(prefers-color-scheme: light)">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Repertórios da PIBI</title>
+  <link rel="stylesheet" href="style.css" />
+  <link id="favicon-light" rel="shortcut icon" href="pibilogolight.png" type="image/png" sizes="32x32" media="(prefers-color-scheme: dark)">
+  <link id="favicon-dark" rel="shortcut icon" href="pibilogodark.png" type="image/png" sizes="32x32" media="(prefers-color-scheme: light)">
 </head>
 <body>
-    <div id="container">
-        <main>
-            <section>
-                <h1>Repertórios da <abbr class="PIBI" title="Primeira Igreja Batista de Itaporanga">PIBI</abbr></h1>
-                <p class="boas-vindas">
-                    Este site oferece uma busca pelo repertório musical ministrado na nossa igreja.
-                </p>
-               
-                <p class="boas-vindas">
-                    Use a barra de pesquisa para encontrar exatamente o que precisa, seja uma música específica ou todo o repertório de canções ministradas por alguém.
-                    <em class="boas-vindas">(se você estiver usando um dispositivo com tela pequena, deslize lateralmente para visualizar todo o conteúdo da pesquisa).</em>
-                </p>
-                <input type="text" id="searchInput" placeholder="Digite aqui para pesquisar...">
-                <button onclick="search()">Buscar</button>
-            </section>
-        </main>
-        <div class="table-container">
-            <table id="results">
-                <thead id="cabecalho"></thead>
-                <tbody id="musicas"></tbody>
-            </table>
-        </div>
-    </div>
-    <footer>
-        <p class="footer">“Todo ser que respira louve ao Senhor. Aleluia!” Salmos 150:6</p>
-    </footer>
+  <div id="container">
+    <main>
+      <section>
+        <h1>Repertórios da <abbr class="PIBI" title="Primeira Igreja Batista de Itaporanga">PIBI</abbr></h1>
+        <p class="boas-vindas">
+          Este site oferece uma busca pelo repertório musical ministrado na nossa igreja.
+        </p>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
-    <script src="script.js"></script> <!-- JS externo aqui -->
+        <p class="boas-vindas">
+          Use a barra de pesquisa para encontrar exatamente o que precisa.
+          <em>(Se estiver em um celular, deslize lateralmente para ver toda a tabela)</em>
+        </p>
+
+        <input type="text" id="busca" placeholder="Digite aqui para pesquisar...">
+        <button id="botao-busca">Buscar</button>
+      </section>
+    </main>
+
+    <div class="table-container tabela-wrapper" style="display:none">
+      <table id="results">
+        <thead id="cabecalho"></thead>
+        <tbody id="musicas"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer>
+    <p class="footer">“Todo ser que respira louve ao Senhor. Aleluia!” Salmos 150:6</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
