@@ -93,22 +93,5 @@ window.addEventListener("DOMContentLoaded", () => {
   document.getElementById("busca").value = "";
   inicializarTabela();
 
-  // Modal
-  const modal = document.getElementById("ministersModal");
-  const openModal = document.getElementById("openMinistersModal");
-  const closeModal = document.querySelector(".close");
-
-  openModal.addEventListener("click", () => {
-    modal.style.display = "flex";
-  });
-
-  closeModal.addEventListener("click", () => {
-    modal.style.display = "none";
-  });
-
-  window.addEventListener("click", event => {
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
   });
 });
