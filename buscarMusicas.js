@@ -92,6 +92,4 @@ document.getElementById("busca").addEventListener("keypress", e => {
 window.addEventListener("DOMContentLoaded", () => {
   document.getElementById("busca").value = "";
   inicializarTabela();
-
-  });
 });
