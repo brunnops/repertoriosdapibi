@@ -92,6 +92,10 @@ abbr:hover {
     text-indent: 30px;
 }
 
+#busca {
+    text-size: 0.8rem;
+}
+
 input[type="text"] {
     width: 100%;
     padding: 10px;
