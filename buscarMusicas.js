@@ -21,11 +21,18 @@ function exibirMusicas(filtro = "") {
     )
   );
 
-  if (musicasFiltradas.length === 0) {
-    tabelaWrapper.style.display = "none";
-    corpoTabela.innerHTML = '<tr><td colspan="100%" style="text-align: center; color: red;">Nenhum resultado encontrado.</td></tr>';
-    return;
-  }
+ if (musicasFiltradas.length === 0) {
+  tabelaWrapper.style.display = "none";
+  corpoTabela.innerHTML = `
+    <tr>
+      <td colspan="100%" style="text-align: center; color: red; padding: 15px;">
+        Nenhum resultado encontrado.<br>
+        Verifique se digitou corretamente e tente novamente.
+      </td>
+    </tr>`;
+  return;
+}
+
 
   tabelaWrapper.style.display = "block";
 
