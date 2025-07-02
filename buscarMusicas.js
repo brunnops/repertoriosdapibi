@@ -59,7 +59,6 @@ function exibirMusicas(filtro = "") {
         icon.style.width = "16px";
         icon.style.height = "16px";
         icon.style.marginRight = "5px";
-        icon.style.alling = "center";
 
         link.appendChild(icon);
         link.appendChild(document.createTextNode("Assistir no YouTube"));
