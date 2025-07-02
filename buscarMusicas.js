@@ -58,7 +58,7 @@ function exibirMusicas(filtro = "") {
         icon.alt = "YouTube";
         icon.style.width = "16px";
         icon.style.height = "16px";
-        icon.style.marginRight = "20px";
+        icon.style.marginRight = "5px";
 
         link.appendChild(icon);
         link.appendChild(document.createTextNode("Assistir no YouTube"));
