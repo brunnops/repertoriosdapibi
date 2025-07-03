@@ -92,8 +92,8 @@ abbr:hover {
     text-indent: 30px;
 }
 
-#busca {
-    font-size: 16px;
+/* #busca {
+    font-size: 16px; */
 }
 
 #busca::placeholder {
