@@ -114,7 +114,7 @@ input[type="text"] {
 /* Ajuste do placeholder em telas maiores */
 @media (min-width: 768px) {
   #busca::placeholder {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
   }
 }
 
