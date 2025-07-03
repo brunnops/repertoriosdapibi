@@ -100,6 +100,7 @@ abbr:hover {
     transform: scale(0.8);
     transform-origin: left center;
     display: inline-block;
+    color: rgba(85, 85, 85, 0.6); /* 0.6 = 60% opacidade */
 }
 
 input[type="text"] {
